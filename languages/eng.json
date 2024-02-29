@@ -1,0 +1,39 @@
+{
+    "menu" : {
+        "menu1" : "about us",
+        "menu2" : "our menu",
+        "menu3" : "gallery",
+        "menu4" : "contact"
+    },
+    "section1" : {
+        "title" : "about us",
+        "description1" : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat at obcaecati odit architecto aliquid! Sunt, magnam cum officiis mollitia eius delectus ratione nemo sint doloribus nam atque ab repudiandae iusto.",
+        "description2" : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat at obcaecati odit architecto aliquid! Sunt, magnam cum officiis mollitia eius delectus ratione nemo sint doloribus nam atque ab repudiandae iusto.",
+        "description3" : "Appetizers, starters, snacks, sandwiches, main courses and desserts are made with the freshest ingredients; and they can be accompanied with cold or hot beverages from our bar."
+    },
+    "section2" : {
+        "title" : "our menu",
+        "menu1" : "appetizers",
+        "menu2" : "sandwiches",
+        "menu3" : "main courses",
+        "menu4" : "desserts",
+        "menu5" : "beverages",  
+        "cart1" : "main menu (pdf)",
+        "cart2" : "vegan and gluten-free menu  (pdf)",
+        "cart3" : "kids menu (pdf)"
+    },
+    "section3" : {
+        "title" : "gallery"
+    },
+    "section4" : {
+        "title" : "contact",
+        "description1" : "We are located in the gardens of the 'random name' and access to the restaurant is free.",
+        "description2" : "If you have questions or comments, do not hesitate to contact us.",
+        "location" : "Av. Lorem ipsum 2020 (line in english text xdd), Lima, Perú",
+
+        "titleHours" : "opening hours",
+        "hoursDescription1" : "We are open daily, including holidays. Current opening hours: Monday to Saturday from 12:00 m to 10:00 pm. | Sundays from 12:00 m to 7:00 pm.",
+        "hoursDescription2" : "Reduced hours: December 24, 25, 31 and January 1 from 12:00 m to 6:00 pm.",
+        "hoursDescription3" : "*Hours subject to change."
+    }
+}

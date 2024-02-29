@@ -1,0 +1,39 @@
+{
+    "menu" : {
+        "menu1" : "nosotros",
+        "menu2" : "la carta",
+        "menu3" : "galeria",
+        "menu4" : "contacto"
+    },
+    "section1" : {
+        "title" : "nosotros",
+        "description1" : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat at obcaecati odit architecto aliquid! Sunt, magnam cum officiis mollitia eius delectus ratione nemo sint doloribus nam atque ab repudiandae iusto.",
+        "description2" : "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat at obcaecati odit architecto aliquid! Sunt, magnam cum officiis mollitia eius delectus ratione nemo sint doloribus nam atque ab repudiandae iusto.",
+        "description3" : "Entradas, piqueos, sándwiches, platos de fondo y postres son elaborados con los más frescos ingredientes; y pueden ser acompañados con bebidas frías o calientes de nuestra barra."
+    },
+    "section2" : {
+        "title" : "la carta",
+        "menu1" : "entradas",
+        "menu2" : "sandwiches",
+        "menu3" : "plato de fondo",
+        "menu4" : "postres",
+        "menu5" : "bebidas",        
+        "cart1" : "carta principal (pdf)",
+        "cart2" : "carta vegana (pdf)",
+        "cart3" : "carta niños (pdf)"
+    },
+    "section3" : {
+        "title" : "galería"
+    },
+    "section4" : {
+        "title" : "contacto",
+        "description1" : "Estamos ubicados en los jardines de 'nombre cualquiera'  y el acceso al restaurante es libre, previa reserva.",
+        "description2" : "Si tienes preguntas o comentarios no dudes en comunicarte con nosotros.",
+        "location" : "Av. Lorem ipsum 2020 (dolor sit amet consectetur adipisicing elit), Lima, Perú",
+
+        "titleHours" : "horario de atencion",
+        "hoursDescription1" : "Abrimos todos los días, incluidos feriados. Lunes a Sábado de 12:00pm a 10:00pm (última reserva 8:30pm) <br/> Domingos de 12:00 m a 7:00pm (última reserva 5:00pm)",
+        "hoursDescription2" : "Horario reducido 24,25 y 31 de diciembre y 1 de Enero de 12:00 m a 6:00 pm (última reserva 4:00pm)",
+        "hoursDescription3" : "*Horario sujeto a modificación."
+    }
+}

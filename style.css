@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root{
+    --font-family:"Nunito" , sans-serif;
+    --max-width: 1200px;
+    --color-1: white;
+    --color-2: #876f56;
+    --font-family-2: Helvetica, sans-serif; 
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.menu-section{
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background-color: transparent;
+
+    margin: .2rem;
+    z-index: 100;
+    color: var(--color-1);
+    transition: .7s all;
+    padding: 1rem 0;
+}
+
+.menu-section a{
+    color: var(--color-1);
+    transition: .5s all;
+}
+
+.menu-logo{
+    display: flex;
+    align-items: center;
+}
+
+.menu-logo h1{
+    font-size: 2.4rem;
+}
+
+
+.menu-navigation{
+    display: inline-flex;
+    gap: 1rem;
+    padding: 2rem 1.5rem;
+    transition: .5s all;
+    align-items: center;
+}
+
+.menu-navigation.open{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    background:transparent;
+    left: 0;
+    top: 100px;
+    width: 100%;
+    padding: 1rem 0;
+
+}
+
+.menu-item:last-child{
+    border: none;
+}
+
+.menu-section.effect .menu-navigation{
+    top: 53.6px;
+    background-color: var(--color-1);
+    border-bottom: solid 1px rgb(206, 206, 206);
+}
+
+.menu-item{
+    list-style: none;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-right: solid 1px var(--color-1);
+    padding: 0 1rem 0 0;
+}
+
+.button-reservar{
+    margin-left: .1rem;
+    outline: none;
+    border: solid 1px var(--color-1);
+    color: var(--color-1);
+    text-transform: uppercase;
+    background: transparent;
+    padding: .5rem 1.3rem;
+    cursor: pointer;
+    border-radius: 16px;
+    transition: .5s all;
+}
+
+.button-modal{
+    display: none;
+    cursor: pointer;
+}
+
+
+.menu-section.effect{
+
+    background-color: var(--color-1);
+    border-bottom: solid 1px rgb(206, 206, 206);
+    padding: 0;
+}
+
+.menu-section.effect a{
+    color: black;
+    backdrop-filter: blur(6px);
+}
+
+.menu-section.effect .menu-item{
+    border-color: black;
+}
+
+.menu-section.effect .button-reservar{
+    color: black;
+    border-color: black;
+}
+
+.menu-section.effect .button-modal{
+    color: black;
+}
+
+.menu-section.effect .dropdown-languaje{
+    color:black;
+}
+
+.dropdown-languaje{
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    padding: .2rem;
+    cursor: pointer;
+    color: var(--color-1)
+}
+
+.dropdown-languaje:focus{
+    border: none;
+}
+
+.dropdown-languaje option{
+    background-color: transparent;
+    color:black;
+}
+
+
+/*Seccion del main contenido
+----------------------------------------------------------------------------
+*/
+.text-p{
+    font-weight: 200;
+    font-size: 1.3rem;
+}
+
+.main-section{
+    width: min(100%,var(--max-width)); 
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+/*--------CLASE SPECIAL PARA EsTANDARIzAR LOS SECTION DE LA PAGINA*/
+.default{
+
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+}
+
+.portada-section{
+    background: url("./assets/portada.jpg")  no-repeat center;
+    filter: brightness(.7);
+    box-shadow: inset 0 0 105px 45px  rgba(0, 0, 0, 0.837);
+    width: 100%;
+    height: 100vh;
+    margin: 0 0 1rem 0;
+}
+
+.portada-section img{
+    width: 100%;
+    height: 100vh;
+}
+
+
+.title-section{
+    font-size: 4rem;
+    letter-spacing: .35rem;
+    font-weight: 400;
+    color: #876f56;
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.nosotros-section{
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 7rem;
+    padding: 1rem;
+
+}
+.nosotros-body{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+
+}
+
+.nosotros-img img{
+    width: 80%;
+}
+
+/*---------SECCION De LA Carta del restaurante------------*/
+.lacarta-section{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.carta-nav-section {
+    background-image: url(./assets/carta.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+.carta-menu{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    row-gap: .4rem;
+    justify-items: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    border: 2px solid rgba(255,255,255,0.2);
+    margin: 0 .5rem;
+}
+
+.carta-item{
+    list-style: none;
+}
+
+.carta-item button{
+ 
+    border: none;
+    background: transparent;
+    /*background-color: var(--color-2); */
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    color: white;
+    cursor: pointer;
+    border-bottom: 2px solid var(--color-2);
+    padding: .8rem 0;
+    border-radius: 3px;
+    width: 150px;
+    transition: .5s all;
+    
+    
+}
+
+.carta-item button:hover{
+    background-color: #593d3b;        
+}
+
+.carta-buttons{
+    display: flex;
+
+    justify-content: center;
+}
+
+.carta-buttons a{
+    outline: none;
+    border: solid 1px var(--color-2);
+    color: var(--color-2);
+    /*color: rgb(138, 138, 138); */
+    text-transform: uppercase;
+    background: transparent;
+    padding: .5rem 1.3rem;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 .5rem;
+}
+
+.carta-modal{
+    position: absolute;
+    z-index: 150;
+    max-width: 840px;
+    height: auto;
+  /*  background-color: peru; */
+    background: rgb(221, 200, 178);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: .7s all;
+}
+
+
+.carta-modal .close-modal{
+    border: none;
+    padding: .3rem .5rem;
+    /*
+    position: absolute;
+    top: 0;
+    right: 0;
+    */
+    cursor: pointer;
+    align-self:flex-end;
+    font-weight: 700;
+    border: 1px solid black;
+
+    background: transparent;
+}
+
+.carta-modal.open{
+    display: block;
+    display: flex;
+    flex-direction: column;
+}
+
+.carta-modal table{
+    margin: 1rem 2rem 1rem 2rem;
+    border: 1px solid black;
+    font-weight: 300;
+}
+
+.carta-titleFood{
+    font-weight: 600;
+
+}
+
+.carta-precio{
+    width: 3rem;
+}
+/*------------ESTILOS DE GALERIA---------------*/
+.galeria-section{
+    flex-direction: column;
+}
+
+.galeria-body{
+    width: min(100%,var(--max-width));
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+
+    color: var(--color-1);
+    /**/
+}
+
+.galeria-platos img, .galeria-local img{
+    width: 100%;
+    height: 100%;
+
+}
+
+.galeria-platos, .galeria-local{
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    cursor:default;
+    filter: grayscale(.8);
+}
+
+.galeria-platos:hover, .galeria-local:hover{
+    filter: grayscale(0);
+}
+
+
+
+
+.botonGaleria{
+    font-size: 1.3rem;
+    font-weight: 700;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,.7);
+    color: var(--color-1);
+    box-shadow: 0 0 10px rgba(255,255,255,.6);
+    position: absolute;
+    transition: all .3 ease;
+}
+
+.botonGaleria:hover{
+    cursor: pointer;
+    transform: scale(1.2,1.2);
+}
+
+.galeria-body .atras{
+    left: 2%;
+    top: calc(50%-40px);
+}
+
+.galeria-body .adelante{
+    right: 2%;
+    top: calc(50%-40px);
+}
+
+
+
+.contacto-section{
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    column-gap: 7rem;
+    row-gap: 2rem;
+    padding-top: 7.7rem;
+}
+
+.contacto-body{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.redes{
+    font-size: 1.3rem ;
+    font-weight: 200;
+}
+
+.redes-item{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin: .5rem auto; 
+}
+
+
+
+.redes-item:first-child{
+    align-items: flex-start;
+}
+
+.contacto-horarios{
+    border: solid 1px var(--color-2);
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    padding: 1.5rem;
+}
+
+.contacto-horarios h3{
+    color: var(--color-2);
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.contacto-horarios .text-p{
+    font-size: 1.25rem;
+    font-weight: 200;
+    line-height: 1.5;
+}
+
+.contacto-mapa{
+    width: 100%;
+    grid-column: span 2;
+}
+.contacto-mapa iframe{
+    width: 100%;
+    height: 55vh;
+}
+
+
+
+
+/*-----------------------------------------------------------------------------
+-------------------------FIN DEL MAIN SECTION*/
+/*SECCION DEL FOOTER*/
+.footer-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("./assets/footer-background.jpg");
+    font-size: 1.3rem;
+    font-weight: 200;
+    color: var(--color-1);
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+.footer-redes{
+    color: var(--color-1);
+    cursor: pointer;
+    transition: .5s all;
+}
+
+.footer-redes:hover{
+    color: var(--color-2);
+}
+
+.footer-section .menu-logo h1{
+    color: var(--color-1);
+    font-weight: 700;
+}
+
+@media screen and (max-width:980px) {
+
+    .menu-section{
+        justify-content: space-between;
+        padding: 1.5rem;
+    }
+
+    .menu-navigation{
+        display: none;
+    }
+
+    .menu-item{
+        border: none;
+        padding: .5rem;
+    }
+
+
+
+    .button-modal{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nosotros-section{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .nosotros-body{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nosotros-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contacto-section{
+        gap: 1rem;
+    }
+}
+/*solo para tablet*/
+@media screen and (max-width: 780px) {
+
+    .default{
+        padding: 2.3rem 1rem;
+    }
+    .contacto-section{
+        grid-template-columns: 1fr;
+
+    }
+
+    .contacto-body{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contacto-mapa{
+        grid-column: span 1;
+    }
+
+    .lacarta-section{
+        padding: 1rem;
+    }
+
+    .carta-modal table{
+        margin: .4rem 1rem 1rem 1rem;
+    }
+
+
+}
+/*dispositivos mobiles*/
+@media screen and (max-width: 680px) {
+    .carta-buttons{
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        align-items: auto;
+    }
+
+    .nosotros-section.default{
+        height: auto;
+    }
+
+    .galeria-body{
+        grid-template-columns: 1fr;
+    }
+}

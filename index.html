@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Restaurante</title>
+</head>
+
+<body>
+    <header>
+        <nav class="menu-section">
+        <div class="menu-logo">
+            <a href="#portada">
+                <h1>Logo Restaurant</h1>
+            </a>
+        </div>
+
+            <ul class="menu-navigation">
+                <li class="menu-item">
+                    <a href="#nosotros" data-section="menu" data-value="menu1">Nosotros</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#lacarta" data-section="menu" data-value="menu2">La carta</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#galeria" data-section="menu" data-value="menu3">Galería</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#contacto" data-section="menu" data-value="menu4">Contacto</a>
+                </li>
+                <li class="menu-item ">
+                    <select name="" id="" class="dropdown-languaje" onchange="cambiarLenguaje()">
+                        <option value="esp" >ESP</option>
+                        <option value="eng" >ENG</option>
+                    </select>
+                    <!--
+                    <a href="#">
+                        ESP
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z" />
+                       <!--
+                        </svg>
+                    </a>
+                -->
+                </li>
+                <li class="menu-item">
+                    <button class="button-reservar">
+                        Reservar
+                    </button>
+                </li>
+            </ul>
+            <div class="button-modal" onclick="abrirMenuModal()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 448 512"
+                    fill="currentColor"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                </svg>
+            </div>
+        </nav>
+
+
+    </header>
+
+
+    <section class="portada-section" id="portada">
+        <!-- <img src="./assets/portada.jpg" alt="portada"> -->
+    </section>
+
+    <main class="main-section">
+
+
+
+        <section class="nosotros-section default" id="nosotros">
+            <div class="nosotros-body">
+                <h2 class="title-section" data-section="section1" data-value="title">Nosotros</h2>
+                <p class="text-p" data-section="section1" data-value="description1">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat at obcaecati odit architecto
+                    aliquid!
+                    Sunt, magnam cum officiis mollitia eius delectus ratione nemo sint doloribus nam atque ab
+                    repudiandae
+                    iusto.
+                </p>
+                <p class="text-p" data-section="section1" data-value="description2">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat at obcaecati odit architecto
+                    aliquid!
+                    Sunt, magnam cum officiis mollitia eius delectus ratione nemo sint doloribus nam atque ab
+                    repudiandae
+                    iusto.
+                </p>
+                <p class="text-p" data-section="section1" data-value="description3">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat at obcaecati odit architecto
+                    aliquid!
+                    Sunt, magnam cum officiis mollitia eius delectus ratione nemo sint doloribus nam atque ab
+                    repudiandae
+                    iusto.
+                </p>
+            </div>
+            <div class="nosotros-img">
+                <img src="./assets/nosotros.jpg" alt="nosotros">
+            </div>
+
+        </section>
+
+        <section class="lacarta-section default" id="lacarta">
+            <h2 class="title-section" data-section="section2" data-value="title">La Carta</h2>
+            <div class="carta-nav-section">
+                <ul class="carta-menu">
+                    <li class="carta-item"><button onclick="abrirCartaModal()" data-section="section2" data-value="menu1">Entradas</button></li>
+                    <li class="carta-item"><button onclick="abrirCartaModal()" data-section="section2" data-value="menu2">Sandwiches</button></li>
+                    <li class="carta-item"><button onclick="abrirCartaModal()" data-section="section2" data-value="menu3">Plato de Fondo</button></li>
+                    <li class="carta-item"><button onclick="abrirCartaModal()" data-section="section2" data-value="menu4">Postres</button></li>
+                    <li class="carta-item"><button onclick="abrirCartaModal()" data-section="section2" data-value="menu5">Bebidas</button></li>
+                </ul>
+            </div>
+
+            <div class="carta-buttons">
+                <a href="./docs/Menu_main.pdf" download="Menu-main" data-section="section2" data-value="cart1">Carta Principal (PDF)</a>
+                <a href="./docs/Menu_main.pdf" download="Menu-main" data-section="section2" data-value="cart2">Carta Vegana (PDF)</a>
+                <a href="./docs/Menu_main.pdf" download="Menu-main" data-section="section2" data-value="cart3">Carta Niños (PDF)</a>
+            </div>
+
+            <div class="carta-modal">
+                <button class="close-modal" onclick="abrirCartaModal()">X</button>
+                <table>
+                    <tbody>
+
+                        <tr>
+                            <td class="carta-titleFood">CAUSA DE LANGOSTINOS</td><td class="carta-precio">S/ 36</td>
+                        </tr>
+                        <tr>
+                            <td>Papa amarilla prensada al limón, rellena de langostinos grillados, salsa golf y palta.</td>
+                        </tr>
+                        <tr>
+                            <td class="carta-titleFood">CAUSA DE POLLO CON VERDURAS ("LIMEÑA")</td><td>S/ 30</td>
+                        </tr>
+                        <tr>
+                            <td>Papa amarilla prensada al limón, rellena de pollo, verduras y palta.</td>
+                        </tr>
+                        <tr>
+                            <td class="carta-titleFood">SPRING ROLLS</td><td>S/ 36</td>
+                        </tr>
+                        <tr>
+                            <td>Rellenos de lomito de cerdo y verduras con salsa de teriyaki y limón agridulce.</td>
+                        </tr>
+                        <tr>
+                            <td class="carta-titleFood">PIQUEO CRIOLLO</td><td>S/ 75</td>
+                        </tr>
+                        <tr>
+                            <td>Tamalito verde, causa rellena de pollo, papitas a la huancaína, tequeños y mini brochetas de lomo.</td>
+                        </tr>
+                        <tr>
+                            <td class="carta-titleFood">TARTARE DE ATÚN	</td><td>S/ 60</td>
+                        </tr>
+                        <tr>
+                            <td>En salsa kabayaki y toques de ajonjoli, con guacamole y croûtons.</td>
+                        </tr>
+                        <tr>
+                            <td class="carta-titleFood">TARTARE DE SALMÓN</td><td>S/ 60</td>
+                        </tr>
+                        <tr>
+                            <td>Servido con chips de pan pita.</td>
+                        </tr>
+                        <tr>
+                            <td class="carta-titleFood">SOLTERITO NOVOANDINO</td><td>S/ 39</td>
+                        </tr>
+                        <tr>
+                            <td >Quinua, quinua crujiente, choclo, aceitunas deshidratadas, rocoto, cebolla, tomate, queso fresco y habas; en aceite de oliva y limón.</td>
+                        </tr>
+                    </tbody>
+                </table>              	
+                    <!--
+	
+
+
+	
+
+
+	
+
+
+
+
+
+	
+
+
+	
+
+                    -->
+            </div>
+        </section>
+
+        <section class="galeria-section default" id="galeria">
+            <h2 class="title-section" data-section="section3" data-value="title">Galería</h2>
+            <div class="galeria-body">
+                <div class="galeria-platos">
+                    <button class="atras botonGaleria">&#60</button>
+                    <button class="adelante botonGaleria">&#62</button>
+                    
+                    <img src="./assets/galeriaPlatos1.jpg" alt="platos">
+                </div>
+                <div class="galeria-local">
+                    <button class="atras botonGaleria">&#60</button>
+                    <button class="adelante botonGaleria">&#62</button>
+                    <img src="./assets/galeriaAmbientes1.jpg" alt="local">
+                </div>
+                <!--
+                    <h2 class="galeria-title">Platos</h2>
+                                        <h2 class="galeria-title">Ambientes</h2>
+                <img src="./assets/galeria-platos.jpg" alt="platos">
+                <img src="./assets/local.jpg" alt="local">
+                -->
+
+            </div>
+        </section>
+
+        <section class="contacto-section default" id="contacto">
+
+            <div class="contacto-body">
+                <h2 class="title-section" data-section="section4" data-value="title">Contacto</h2>
+                <p class="text-p" data-section="section4" data-value="description1">Estamos ubicados en los jardines de "nombre cualquiera" y el acceso al restaurante es
+                    libre, previa reserva.
+                </p>
+                <p class="text-p" data-section="section4" data-value="description2">Si tienes preguntas o comentarios no dudes en comunicarte con nosotros.</p>
+                <ul class="redes">
+                    <li class="redes-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path
+                                d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+                        </svg>
+                        <p data-section="section4" data-value="location">Av. Lorem ipsum 2020 (dolor sit amet consectetur adipisicing elit), Lima, Perú </p>
+                    </li>
+                    <li class="redes-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path
+                                d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
+                        </svg>
+                        correo@restaurante.com
+                    </li>
+                    <li class="redes-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path
+                                d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64h98.2V334.2H109.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H255V480H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z" />
+                        </svg>
+                        Facebook
+                    </li>
+                    <li class="redes-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                            <path
+                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                        </svg>
+                        Instagram
+                    </li>
+                </ul>
+            </div>
+            <div class="contacto-horarios">
+                <h3 data-section="section4" data-value="titleHours">horario de atención:</h3>
+                <p class="text-p" data-section="section4" data-value="hoursDescription1">
+                    Abrimos todos los días, incluidos feriados. 
+                    Lunes a Sábado de 12:00pm a 10:00pm (última reserva 8:30pm)<br/>
+                    Domingos de 12:00 m a 7:00pm (última reserva 5:00pm)
+                </p>
+                <p class="text-p" data-section="section4" data-value="hoursDescription2">
+                    Horario reducido 24,25 y 31 de diciembre y 1 de Enero de 12:00 m a 6:00 pm (última reserva 4:00pm)
+                </p>
+                <p class="text-p" data-section="section4" data-value="hoursDescription3">
+                    *Horario sujeto a modificación.
+                </p>
+            </div>
+            <!---
+            <div class="contacto-mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11036.244323078477!2d-77.03611484510029!3d-12.050290987557144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8c80c682de3%3A0x17152161175cbcdd!2sPlaza%20San%20Mart%C3%ADn!5e0!3m2!1ses-419!2spe!4v1708709989371!5m2!1ses-419!2spe"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        -->
+        </section>
+
+    </main>
+
+    <footer class="footer-section">
+        <div class="menu-logo">
+            <a href="#portada"><h1>LOGO</h1></a>
+        </div>
+        <p>
+            copryright &#169 Nombre de restaurante
+        </p>
+        <div class="footer-redes">
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 448 512"
+                fill="currentColor"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+            </svg>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
